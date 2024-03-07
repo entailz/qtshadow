@@ -165,10 +165,10 @@ ShellRoot {
         anchors.leftMargin: 20
         anchors.topMargin: 20
         background: Rectangle {
-            implicitWidth: 50
-            implicitHeight: 20
-            color: imageToggle.checked ? "#9977B900" : "#99FB0329"
-            radius: 20
+          implicitWidth: 50
+          implicitHeight: 20
+          color: imageToggle.checked ? "#9977B900" : "#99FB0329"
+          radius: 20
         }
       }
       Text {
@@ -176,15 +176,8 @@ ShellRoot {
         y: 100
         x: parent.width / 1.7
         font.pixelSize: 15
-        color:(recstatus.text.substring(28) == "false") ? "#C34B16" : "#BAFB00"
+        color: (recstatus.text.substring(28) == "false") ? "#C34B16" : "#BAFB00"
       }
-
-      // mask: Region{
-      //   item: buttonColumn
-      //   Region{
-      //     item: obsRectangle
-      //   }
-      // }
       property var maskRegion: Region {
         Region {
           item: buttonColumn
@@ -215,52 +208,42 @@ ShellRoot {
 
             Process {
               id: obsKill
-              running: false
               command: ["pkill", "obs"]
             }
             Process {
               id: notifyRec
-              running: false
               command: ["notify-send", "OBS is not currently running... Click the OBS button to launch."]
             }
             Process {
               id: obsLaunch
-              running: false
               command: ["com.obsproject.Studio", "--minimize-to-tray"]
             }
             Process {
               id: streamToggle
-              running: false
               command: ["obs-cmd", "-w", `obsws://localhost:4455/${wskey}`, "streaming", "toggle"]
             }
             Process {
               id: replayToggle
-              running: false
               command: ["obs-cmd", "-w", `obsws://localhost:4455/${wskey}`, "replay", "toggle"]
             }
             Process {
               id: replaySave
-              running: false
               command: ["obs-cmd", "-w", `obsws://localhost:4455/${wskey}`, "replay", "save"]
             }
             Process {
               id: recordStart
-              running: false
               command: ["obs-cmd", "-w", `obsws://localhost:4455/${wskey}`, "recording", "start"]
             }
             Process {
               id: recordToggle
-              running: false
               command: ["obs-cmd", "-w", `obsws://localhost:4455/${wskey}`, "recording", "toggle"]
             }
             Process {
               id: recordStop
-              running: false
               command: ["obs-cmd", "-w", `obsws://localhost:4455/${wskey}`, "recording", "stop"]
             }
             Process {
               id: streamStart
-              running: false
               command: ["obs-cmd", "-w", `obsws://localhost:4455/${wskey}`, "stream", "start"]
             }
             Process {
@@ -294,7 +277,7 @@ ShellRoot {
                 height: 200
                 onClicked: {
                   // !replayButton.checked ? replayToggle.running = true : replaySave.running = true
-                  replayButton.checked ? replaySave.running = true : replayToggle.running = true
+                  replayButton.checked ? replaySave.running = true : replayToggle.running = true;
                   replayButton.checked = parent.clicked = !parent.clicked;
                 }
                 background: Rectangle {
@@ -311,7 +294,6 @@ ShellRoot {
                 }
               }
             }
-
 
             Rectangle {
               property bool clicked: false
@@ -334,7 +316,7 @@ ShellRoot {
                 checked: recordingStatus
                 onClicked: {
                   recordToggle.running = true;
-                  recordButton.checked = recordingStatus = !recordingStatus
+                  recordButton.checked = recordingStatus = !recordingStatus;
                 }
                 contentItem: Image {
                   id: recordSQ
@@ -391,7 +373,6 @@ ShellRoot {
                 width: 200
                 height: 200
                 onClicked: {
-
                   streamToggle.running = true;
                   broadcastButton.checked = parent.clicked = !parent.clicked;
                 }
