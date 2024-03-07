@@ -1,4 +1,4 @@
-#### QtShadow - Nvidia Shadowplay on Wayland? + AMD ;)
+## QtShadow - Nvidia Shadowplay on Wayland? + AMD ;)
 
 Quickshell overlay for controlling OBS >30 via websocketv5.
 Specify your websocket key with env variable `WSKEY=123456`
@@ -19,14 +19,14 @@ Why? because I felt like it.
 - Toggle streaming
 - Toggle replay buffer
 
-## Roadmap:
+#### Roadmap:
 
 - Scene selection
 - Card usage statistics
 - Gallery
 - Quickmenu
 
-## Dependencies:
+#### Dependencies:
 
 ```
 quickshell
@@ -34,7 +34,7 @@ yay -S --needed qt5-graphicaleffects qt6ct qt6-shadertools obs-cmd
 flatpak install com.obsproject.Studio
 ```
 
-## Setup:
+#### Setup:
 
 Open OBS, Tools > Websocket Server Settings
 Enable WebSocket server and set server password
