@@ -1,5 +1,7 @@
 ## QtShadow - Nvidia Shadowplay on Wayland? + AMD ;)
 
+![qtshadow](https://github.com/entailz/qtshadow/blob/master/assets/amd_nvidia.png)
+
 Quickshell overlay for controlling OBS >30 via websocketv5.
 Specify your websocket key with env variable `WSKEY=123456`,
 as well as your websocket port `WSPORT=4455`.
