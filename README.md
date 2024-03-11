@@ -3,8 +3,12 @@
 ![qtshadow](https://github.com/entailz/qtshadow/blob/master/assets/amd_nvidia.png)
 
 Quickshell overlay for controlling OBS >30 via websocketv5.
-Specify your websocket key with env variable `WSKEY=123456`,
-as well as your websocket port `WSPORT=4455`.
+
+<u>Required env variables:</u>
+
+- WSKEY - your obs websocket v5 key
+- WSPORT - websocket port
+- OBSCMD - command used to launch OBS
 
 Card options `NVIDIACARD=1` or `AMDCARD=1`
 (purely aesthetic, functionally the same... for now)
