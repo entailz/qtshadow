@@ -13,8 +13,6 @@ Quickshell overlay for controlling OBS >30 via websocketv5.
 Card options `NVIDIACARD=1` or `AMDCARD=1`
 (purely aesthetic, functionally the same... for now)
 
-and finally your `OBSCMD=com.obsproject.Studio`
-
 Built w/ Quickshell, big thanks to outfoxxed!
 https://git.outfoxxed.me/outfoxxed/quickshell
 
@@ -65,5 +63,5 @@ layerrule = blur, qtshadow
 layerrule = ignorezero, qtshadow
 layerrule = animation slide, qtshadow
 
-bindr = SUPERSHIFT, Q, exec, pkill quickshell || NVIDIACARD=1 WSKEY=123456 quickshell --config ~/.config/quickshell/qtshadow/shell.qml 2>/dev/null &
+bindr = SUPERSHIFT, Q, exec, pkill quickshell || AMDCARD=1 WSKEY=123456 WSPORT=4455 OBSCMD=com.obsproject.Studio quickshell --config ~/.config/quickshell/qtshadow/shell.qml 2>/dev/null &
 ```
